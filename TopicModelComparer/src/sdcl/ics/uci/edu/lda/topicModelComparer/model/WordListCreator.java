@@ -10,6 +10,8 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.zest.cloudio.TagCloud;
 import org.eclipse.zest.cloudio.Word;
 
+import sdcl.ics.uci.edu.lda.modelAggregator.lightweightModel.coreModel.LightweightTopicModel;
+
 public class WordListCreator {
 
 	static int currg = 102;

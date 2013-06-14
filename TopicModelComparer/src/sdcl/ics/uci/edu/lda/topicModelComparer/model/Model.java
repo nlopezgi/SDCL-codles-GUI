@@ -3,7 +3,7 @@ package sdcl.ics.uci.edu.lda.topicModelComparer.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.zest.cloudio.TagCloud;
+import sdcl.ics.uci.edu.lda.modelAggregator.lightweightModel.coreModel.LightweightTopicModel;
 
 public class Model {
 	private List<NodeModel> nodes;

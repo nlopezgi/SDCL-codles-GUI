@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import sdcl.ics.uci.edu.lda.modelAggregator.lightweightModel.coreModel.LightweightTopicModel;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.TopicOverTimeTree.TopicOverTimeNode;
 
 public class TopicOverTimeLinker {

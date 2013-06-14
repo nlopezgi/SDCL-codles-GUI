@@ -1,10 +1,8 @@
 package sdcl.ics.uci.edu.lda.topicModelComparer.views;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -19,14 +17,11 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
-import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.graphics.Transform;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
@@ -38,7 +33,7 @@ import org.eclipse.zest.cloudio.TagCloudViewer;
 import org.eclipse.zest.cloudio.Word;
 import org.eclipse.zest.cloudio.layout.ILayouter;
 
-import sdcl.ics.uci.edu.lda.topicModelComparer.model.LightweightTopicModel;
+import sdcl.ics.uci.edu.lda.modelAggregator.lightweightModel.coreModel.LightweightTopicModel;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.MultiModelReader;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.TopicOverTimeLinker;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.TopicOverTimeLinks;
@@ -65,7 +60,8 @@ public class TopicsOverTimeView {
 	final static int CLOUD_BUFFER = 60;
 
 	public static void main(String[] args) throws Exception {
-		topicModels = MultiModelReader.readSeveralTestModels();
+		// topicModels = MultiModelReader.readSeveralTestModels();
+		topicModels = MultiModelReader.readSeveralTestModelsFromSerializable();
 		final int numTopics = topicModels.get(0).topicToTerm.length;
 
 		Display display = new Display();

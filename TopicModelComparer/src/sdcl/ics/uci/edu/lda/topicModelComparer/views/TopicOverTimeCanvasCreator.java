@@ -1,7 +1,6 @@
 package sdcl.ics.uci.edu.lda.topicModelComparer.views;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -28,7 +27,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.zest.cloudio.TagCloud;
 import org.eclipse.zest.cloudio.Word;
 
-import sdcl.ics.uci.edu.lda.topicModelComparer.model.LightweightTopicModel;
+import sdcl.ics.uci.edu.lda.modelAggregator.lightweightModel.coreModel.LightweightTopicModel;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.TopicOverTimeTree;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.TopicOverTimeTree.TopicOverTimeNode;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.WordListCreator;

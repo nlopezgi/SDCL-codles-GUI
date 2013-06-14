@@ -6,6 +6,9 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import sdcl.ics.uci.edu.lda.modelAggregator.lightweightModel.coreModel.LightweightTopicModel;
+import sdcl.ics.uci.edu.lda.modelAggregator.lightweightModel.coreModel.SerializableModelWriterReader;
+
 /**
  * Reads a LighweightTopicModel object from a csv file. See @MultiModelWriter in
  * project LDAMultiModelAggregtor
@@ -18,6 +21,7 @@ public class MultiModelReader {
 	private static final String aggregateModelOutPath = "D:/nlopezgi/devProjects/topicLocation/NewExperimentData/LDAModels/topicsOverTimeModels/aggregateModels/calico/testAggregateModels";
 	private static final String MODEL_FILE_PREFIX = "testAggregateModel";
 	private static final String MODEL_FILE_TYPE = ".csv";
+	private static final String SERIAL_MODEL_FILE_TYPE = ".ser";
 	private static final String DOC_MATRIX_SUFFIX = "-DocMatrix";
 
 	public static LightweightTopicModel readTestModel() throws Exception {
@@ -42,6 +46,23 @@ public class MultiModelReader {
 			ret.add(topicModel);
 		}
 		return ret;
+	}
+
+	public static List<LightweightTopicModel> readSeveralTestModelsFromSerializable()
+			throws Exception {
+		List<LightweightTopicModel> ret = new ArrayList<LightweightTopicModel>();
+		for (int i = 0; i < NUM_TEST_AGGREGATE_MODELS; i++) {
+			// File modelFile = new File(aggregateModelOutPath,
+			// MODEL_FILE_PREFIX
+			// + i + MODEL_FILE_TYPE);
+			String filename = aggregateModelOutPath + "/" + "SERIAL-"
+					+ MODEL_FILE_PREFIX + i + SERIAL_MODEL_FILE_TYPE;
+			LightweightTopicModel model = SerializableModelWriterReader
+					.readFromFile(filename);
+			ret.add(model);
+		}
+		return ret;
+
 	}
 
 	public static LightweightTopicModel readFromFile(File modelFile)

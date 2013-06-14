@@ -21,7 +21,7 @@ import org.eclipse.zest.cloudio.Word;
 import org.eclipse.zest.cloudio.layout.DefaultLayouter;
 import org.eclipse.zest.cloudio.layout.ILayouter;
 
-import sdcl.ics.uci.edu.lda.topicModelComparer.model.LightweightTopicModel;
+import sdcl.ics.uci.edu.lda.modelAggregator.lightweightModel.coreModel.LightweightTopicModel;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.Model;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.MultiModelReader;
 import sdcl.ics.uci.edu.lda.topicModelComparer.model.TopicOverTimeLinker;
